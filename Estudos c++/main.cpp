@@ -6,11 +6,16 @@
 
 
 	using namespace std;//Permite utilizar alguns comandos sem escrever muito codigo ex:cout e cin.
-	
+	//Função
+int soma(int a, int b) {
+    return a + b;
+}
 	
 int main(int argc, char**argv) {
 	setlocale(LC_ALL, "Portuguese");// Permite o uso correto da acentuação.
 	
+
+
 //Contantes << Possui valor fixo, ou seja,  não pode ser alterado
 /*OBS: Escrever nome de constantes 
 em CAPSLOCK é uma boa pratica de
@@ -149,19 +154,29 @@ cout << "Olá " << minhaString << endl;
 	
 	switch (x) {
   case 1:
-  	cout << "\nVocê escolheu o case 1";
+  	cout << "\nVocê escolheu o case 1"<< endl;
   	break;
   case 2:
-  	cout << "\nVocê escolheu o case 2";
+  	cout << "\nVocê escolheu o case 2"<< endl;
   	break;
   case 3:
-    cout << "\nVocê escolheu o case 3";
+    cout << "\nVocê escolheu o case 3"<< endl;
     break;
   default:
-    cout << "\nNenhuma opção valida";
+    cout << "\nNenhuma opção valida" << endl;
   }
   
+  //Funções:Grupo de instruções que recebe um nome e que pode ser chamada de algum ponto do programa
+/* int addition (int a, int b)
+{
+  int r;
+  r=a+b;
+  return r;
+}*/
+  int Resul;
   
+  Resul= soma(8,2);
+  cout << "A soma é: " << Resul << endl;
   
 			
   			
