@@ -10,17 +10,26 @@
 int soma(int a, int b) {
     return a + b;
 }
+ void menssagem (){
+  cout << "Função vazia" << endl;
+}
+//as referências são indicadas com um  & seguindo o tipo de parâmetro
+void duplicar (int& a, int& b, int& c){
+  a*=2;
+  b*=2;
+  c*=2;
+}
 	
 int main(int argc, char**argv) {
 	setlocale(LC_ALL, "Portuguese");// Permite o uso correto da acentuação.
 	
-
-
 //Contantes << Possui valor fixo, ou seja,  não pode ser alterado
 /*OBS: Escrever nome de constantes 
 em CAPSLOCK é uma boa pratica de
 programação.*/
 const int A = 7;
+int M=1, S=3, N=7;
+
 
 cout << A << endl;
 cout << CONSTANTE << endl;
@@ -167,6 +176,7 @@ cout << "Olá " << minhaString << endl;
   }
   
   //Funções:Grupo de instruções que recebe um nome e que pode ser chamada de algum ponto do programa
+  //Funções são declaradas antes da função main do programa
 /* int addition (int a, int b)
 {
   int r;
@@ -178,6 +188,16 @@ cout << "Olá " << minhaString << endl;
   Resul= soma(8,2);
   cout << "A soma é: " << Resul << endl;
   
+  //Função do tipo vazia: Não retonar um valor
+ menssagem ();
+//Argumentos passado por valor e referencia
+/*Quando uma variável é passada por referência, o que é passado não é mais uma cópia, mas a própria variável, 
+a variável identificada pelo parâmetro da função, torna-se de alguma forma associada ao argumento passado 
+para a função, e qualquer modificação em suas variáveis 
+locais correspondentes dentro da função são refletidas nas variáveis passadas como argumentos na chamada.*/
+
+  duplicar (M, S, N);
+  cout << "m=" << M << ", s=" << S << ", n=" << N << endl;
 			
   			
 			
